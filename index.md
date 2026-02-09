@@ -1,5 +1,3 @@
-# danieldubinko.github.io
-Hi!! This is my personal portfolio 
 # Daniel Dubinko
 
 Robotics engineering student focused on **motion planning, state estimation, and control** for autonomous robotic systems.  
