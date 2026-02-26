@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Capstone Project | Daniel Dubinko</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .project-page {
+            margin-top: 100px;
+        }
+
+        .project-content {
+            max-width: 800px;
+            margin: 0 auto;
+            background: var(--card-bg);
+            padding: 40px;
+            border-radius: 8px;
+            border: 1px solid #334155;
+        }
+
+        .project-content h2 {
+            margin-bottom: 20px;
+            font-size: 2.5rem;
+        }
+
+        .project-content h3 {
+            margin-top: 25px;
+            margin-bottom: 10px;
+            color: var(--accent);
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <div class="nav-container">
+            <h1 class="logo"><a href="index.html" style="text-decoration: none; color: inherit;">daniel dubinko.</a>
+            </h1>
+            <ul class="nav-links">
+                <li><a href="index.html#projects"
+                        style="text-decoration: none; color: var(--text-main); font-weight: bold;"><i
+                            class="fas fa-arrow-left"></i> Back to Projects</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="section project-page">
+        <div class="container">
+            <div class="project-content">
+                <h2>Capstone Project</h2>
+                <img src="path/to/capstone-built.jpg" alt="Picture of built capstone"
+                    style="width:100%; border-radius:8px;">
+                <video src="path/to/capstone-video.mp4" controls style="width:100%; margin-top:15px;"></video>
+
+                <h3>System Architecture</h3>
+                <p>Explanation of the nodes powering the robot.</p>
+                <img src="path/to/rqt-graph.png" alt="Initial RQT Graph" style="width:100%;">
+                <p>Flow chart detailing the integration of other team members' components.</p>
+                <img src="path/to/flowchart.png" alt="Team Flow Chart" style="width:100%;">
+
+                <h3>Navigation & Visualization (Nav2)</h3>
+                <img src="path/to/lidar-scan.png" alt="Lidar Scan" style="width:48%;">
+                <img src="path/to/rviz.png" alt="RVIZ Visualization" style="width:48%;">
+
+                <h3>Hardware & Communication</h3>
+                <p>URDF Configuration and UDP setup for low-latency communication.</p>
+                <img src="path/to/urdf-visual.png" alt="URDF" style="width:100%;">
+                <p><strong>UDP Explanation:</strong> [Insert brief explanation of UDP setup here].</p>
+
+                <h3>Final Output</h3>
+                <img src="path/to/final-rqt-graph.png" alt="Final RQT Graph" style="width:100%;">
+            </div>
+        </div>
+    </section>
+</body>
+
+</html>
