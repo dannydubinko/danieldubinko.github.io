@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daniel Dubinko | Robotics Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+
+    <nav>
+        <div class="nav-container">
+            <h1 class="logo">D. Dubinko</h1>
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="resume.pdf" class="btn-resume" download>Download Resume</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <header id="about" class="hero">
+        <div class="container">
+            <h2>Hello, I'm <span class="highlight">Daniel Dubinko</span></h2>
+            <p class="tagline">Robotics Engineering Student</p>
+            <p class="bio">Focused on <strong>motion planning, state estimation, and control</strong> for autonomous
+                robotic systems. I enjoy working at the system level where algorithms meet real hardware, from
+                simulation through deployment.</p>
+            <div class="social-links">
+                <a href="https://github.com/dannydubinko" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+                <a href="https://www.linkedin.com/in/danieldubinko/" target="_blank"><i class="fab fa-linkedin"></i>
+                    LinkedIn</a>
+            </div>
+
+            <div class="education-tags">
+                <span class="tag">MREN 446 Mobile Robotics</span>
+                <span class="tag">ELEC 279 Java</span>
+            </div>
+        </div>
+    </header>
+
+    <section id="experience" class="section">
+        <div class="container">
+            <h2 class="section-title">Experience</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <h3>Robotics / Engineering Role</h3>
+                        <h4>Company Name | Date - Date</h4>
+                        <ul>
+                            <li>Responsibility or achievement 1.</li>
+                            <li>Responsibility or achievement 2.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="section bg-darker">
+        <div class="container">
+            <h2 class="section-title">Projects</h2>
+            <div class="project-grid">
+
+                <div class="project-card" onclick="openModal('modal-capstone')">
+                    <div class="card-img-placeholder">Capstone Robot Image</div>
+                    <div class="card-content">
+                        <h3>Capstone Project</h3>
+                        <p>Full autonomous robotics system featuring Lidar, Nav2, and UDP communication.</p>
+                        <span class="tech-stack">ROS · Nav2 · UDP · URDF</span>
+                    </div>
+                </div>
+
+                <div class="project-card" onclick="openModal('modal-flipwalker')">
+                    <div class="card-img-placeholder">FlipWalker Image</div>
+                    <div class="card-content">
+                        <h3>FlipWalker</h3>
+                        <p>Iterative design and control architecture for a walking robot mechanism.</p>
+                        <span class="tech-stack">C++ · Controls · CAD</span>
+                    </div>
+                </div>
+
+                <div class="project-card" onclick="openModal('modal-qkrt')">
+                    <div class="card-img-placeholder">QKRT Image</div>
+                    <div class="card-content">
+                        <h3>QKRT Controls</h3>
+                        <p>Flywheel control systems and iterative hardware design.</p>
+                        <span class="tech-stack">Hardware · Controls</span>
+                    </div>
+                </div>
+
+                <div class="project-card" onclick="openModal('modal-petfeeder')">
+                    <div class="card-img-placeholder">Pet Feeder Image</div>
+                    <div class="card-content">
+                        <h3>Automated Pet Feeder</h3>
+                        <p>Hardware integration with a web-based scheduling front-end.</p>
+                        <span class="tech-stack">Node.js · Raspberry Pi · Arduino</span>
+                    </div>
+                </div>
+
+                <div class="project-card" onclick="openModal('modal-co2')">
+                    <div class="card-img-placeholder">CO2 Robot Image</div>
+                    <div class="card-content">
+                        <h3>Autonomous CO₂ Robot</h3>
+                        <p>Indoor navigation and SLAM for generating spatial heat maps.</p>
+                        <span class="tech-stack">C++ · ROS · SLAM</span>
+                    </div>
+                </div>
+
+                <div class="project-card" onclick="openModal('modal-loader')">
+                    <div class="card-img-placeholder">Auto Loader Image</div>
+                    <div class="card-content">
+                        <h3>Automatic Loader</h3>
+                        <p>Automated loading mechanism design and implementation.</p>
+                        <span class="tech-stack">Mechanical Design · Automation</span>
+                    </div>
+                </div>
+
+                <div class="project-card" onclick="openModal('modal-queens')">
+                    <div class="card-img-placeholder">VR / Arm Image</div>
+                    <div class="card-content">
+                        <h3>Research: Queen's Ingenuity Labs</h3>
+                        <p>Real-time human–robot interaction system using VR and robotic arms.</p>
+                        <span class="tech-stack">VR · HRI · Vicon</span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <div id="modal-capstone" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeModal('modal-capstone')">&times;</span>
+            <h2>Capstone Project</h2>
+            <div class="modal-body">
+                <img src="path/to/capstone-built.jpg" alt="Picture of built capstone"
+                    style="width:100%; border-radius:8px;">
+                <video src="path/to/capstone-video.mp4" controls style="width:100%; margin-top:15px;"></video>
+
+                <h3>System Architecture</h3>
+                <p>Explanation of the nodes powering the robot.</p>
+                <img src="path/to/rqt-graph.png" alt="Initial RQT Graph" style="width:100%;">
+                <p>Flow chart detailing the integration of other team members' components.</p>
+                <img src="path/to/flowchart.png" alt="Team Flow Chart" style="width:100%;">
+
+                <h3>Navigation & Visualization (Nav2)</h3>
+                <img src="path/to/lidar-scan.png" alt="Lidar Scan" style="width:48%;">
+                <img src="path/to/rviz.png" alt="RVIZ Visualization" style="width:48%;">
+
+                <h3>Hardware & Communication</h3>
+                <p>URDF Configuration and UDP setup for low-latency communication.</p>
+                <img src="path/to/urdf-visual.png" alt="URDF" style="width:100%;">
+                <p><strong>UDP Explanation:</strong> [Insert brief explanation of UDP setup here].</p>
+
+                <h3>Final Output</h3>
+                <img src="path/to/final-rqt-graph.png" alt="Final RQT Graph" style="width:100%;">
+            </div>
+        </div>
+    </div>
+
+    <div id="modal-flipwalker" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeModal('modal-flipwalker')">&times;</span>
+            <h2>FlipWalker</h2>
+            <div class="modal-body">
+                <video src="path/to/flipwalker-video.mp4" controls style="width:100%;"></video>
+
+                <h3>Hardware Evolution</h3>
+                <div style="display: flex; gap: 10px;">
+                    <img src="path/to/old-flipwalker.jpg" alt="Old Flip Walker" style="width:48%;">
+                    <img src="path/to/new-flipwalker.jpg" alt="New Flip Walker" style="width:48%;">
+                </div>
+                <p>CAD integration and parts:</p>
+                <img src="path/to/stl-file.png" alt="STL File Picture" style="width:100%;">
+
+                <h3>Software & Controls</h3>
+                <p><strong>Stack Explanation:</strong> [Insert stack details here].</p>
+                <img src="path/to/flipwalker-flowchart.png" alt="Flow Chart" style="width:100%;">
+                <p>Read the full code structure explanation in the <a href="https://github.com/dannydubinko/repo-link"
+                        target="_blank">GitHub README</a>.</p>
+
+                <h3>Data Analysis & Future Work</h3>
+                <img src="path/to/graphs.png" alt="Graphs" style="width:100%;">
+                <p>[Explanation of graphs].</p>
+                <h4>Future Work</h4>
+                <ul>
+                    <li>[Insert future work point 1]</li>
+                    <li>[Insert future work point 2]</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div id="modal-qkrt" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeModal('modal-qkrt')">&times;</span>
+            <h2>QKRT Controls</h2>
+            <div class="modal-body">
+                <video src="path/to/qkrt-video.mp4" controls style="width:100%;"></video>
+
+                <h3>System Logic</h3>
+                <img src="path/to/qkrt-flowchart.png" alt="Flow Chart" style="width:100%;">
+                <p>[Flow Chart Explanation].</p>
+
+                <h3>Hardware Iteration: Flywheels</h3>
+                <div style="display: flex; gap: 10px;">
+                    <img src="path/to/old-flywheels.jpg" alt="Old Flywheels" style="width:48%;">
+                    <img src="path/to/new-flywheels.jpg" alt="New Flywheels" style="width:48%;">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="modal-petfeeder" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeModal('modal-petfeeder')">&times;</span>
+            <h2>Automated Pet Feeder</h2>
+            <div class="modal-body">
+                <img src="path/to/petfeeder-design.jpg" alt="Picture of design" style="width:100%; border-radius:8px;">
+
+                <h3>System Architecture</h3>
+                <img src="path/to/petfeeder-flowchart.png" alt="Flowchart" style="width:100%;">
+
+                <h3>User Interface</h3>
+                <img src="path/to/petfeeder-frontend.png" alt="Picture of the Front End" style="width:100%;">
+
+                <p><a href="https://github.com/dannydubinko/repo-link" target="_blank" class="btn-resume">View Source
+                        Code</a></p>
+            </div>
+        </div>
+    </div>
+
+    <div id="modal-co2" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeModal('modal-co2')">&times;</span>
+            <h2>Autonomous CO₂ Robot</h2>
+            <div class="modal-body">
+                <h3>System Architecture</h3>
+                <img src="path/to/co2-flowchart.png" alt="Flow Chart" style="width:100%;">
+
+                <h3>ROS Integration</h3>
+                <img src="path/to/co2-rqt.png" alt="RQT Graph" style="width:100%;">
+            </div>
+        </div>
+    </div>
+
+    <div id="modal-loader" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeModal('modal-loader')">&times;</span>
+            <h2>Automatic Loader</h2>
+            <div class="modal-body">
+                <img src="path/to/loader-picture.jpg" alt="Loader Picture" style="width:100%; border-radius:8px;">
+                <video src="path/to/loader-snapchat.mp4" controls style="width:100%; margin-top:15px;"></video>
+
+                <h3>Design & Logic</h3>
+                <p>[Explanation of the mechanism and control logic].</p>
+                <img src="path/to/loader-flowchart.png" alt="Flowchart" style="width:100%;">
+            </div>
+        </div>
+    </div>
+
+    <div id="modal-queens" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeModal('modal-queens')">&times;</span>
+            <h2>Research Project: Queen's Ingenuity Labs</h2>
+            <div class="modal-body">
+                <p><strong>Note:</strong> Certain implementation details and source code are omitted due to a
+                    Non-Disclosure Agreement (NDA).</p>
+
+                <h3>Project Overview</h3>
+                <p>[Explanation of the VR/Human-Robot Interaction research].</p>
+
+                <h3>System Visualization</h3>
+                <div style="display: flex; gap: 10px;">
+                    <img src="path/to/arm-drawing.png" alt="Robotic Arm Drawing" style="width:48%;">
+                    <img src="path/to/vr-drawing.png" alt="VR Environment Drawing" style="width:48%;">
+                </div>
+                <p>[Explanation of the drawings and how the physical/virtual systems map to each other].</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
