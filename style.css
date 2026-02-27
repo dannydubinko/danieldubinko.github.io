@@ -1,12 +1,18 @@
 /* Base Styles & Variables */
 :root {
-    --bg-color: #0f172a; /* Slate 900 */
-    --bg-darker: #020617; /* Slate 950 */
-    --text-main: #f8fafc; /* Slate 50 */
-    --text-muted: #94a3b8; /* Slate 400 */
-    --accent: #38bdf8; /* Light Blue */
+    --bg-color: #0f172a;
+    /* Slate 900 */
+    --bg-darker: #020617;
+    /* Slate 950 */
+    --text-main: #f8fafc;
+    /* Slate 50 */
+    --text-muted: #94a3b8;
+    /* Slate 400 */
+    --accent: #38bdf8;
+    /* Light Blue */
     --accent-hover: #0284c7;
-    --card-bg: #1e293b; /* Slate 800 */
+    --card-bg: #1e293b;
+    /* Slate 800 */
 }
 
 * {
@@ -89,6 +95,53 @@ nav {
     text-align: left;
 }
 
+.hero-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 50px;
+}
+
+.hero-content {
+    flex: 1;
+}
+
+.hero-image-wrapper {
+    flex-shrink: 0;
+    width: 250px;
+    height: 250px;
+}
+
+.profile-img-placeholder,
+.profile-img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid var(--card-bg);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+}
+
+.profile-img-placeholder {
+    background-color: var(--card-bg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--text-muted);
+    font-size: 1.1rem;
+    border: 2px dashed #475569;
+}
+
+.subsection-title {
+    margin-top: 40px;
+    margin-bottom: 20px;
+    font-size: 1.2rem;
+    color: var(--text-main);
+    border-bottom: 1px solid #334155;
+    padding-bottom: 5px;
+    display: inline-block;
+}
+
 .hero h2 {
     font-size: 3rem;
     margin-bottom: 10px;
@@ -128,15 +181,34 @@ nav {
 }
 
 .education-tags {
-    margin-top: 30px;
+    margin-top: 15px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
 }
 
 .tag {
-    background-color: #334155;
-    padding: 5px 12px;
+    padding: 6px 14px;
     border-radius: 20px;
     font-size: 0.85rem;
-    margin-right: 10px;
+}
+
+.tag-4th {
+    background-color: rgba(56, 189, 248, 0.15);
+    color: var(--accent);
+    border: 1px solid rgba(56, 189, 248, 0.5);
+}
+
+.tag-3rd {
+    background-color: rgba(148, 163, 184, 0.1);
+    color: #cbd5e1;
+    border: 1px solid rgba(148, 163, 184, 0.3);
+}
+
+.tag-2nd {
+    background-color: rgba(51, 65, 85, 0.3);
+    color: var(--text-muted);
+    border: 1px dashed #475569;
 }
 
 /* Sections */
@@ -211,7 +283,7 @@ nav {
 
 .project-card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 10px 20px rgba(0,0,0,0.5);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
     border-color: var(--accent);
 }
 
@@ -246,14 +318,14 @@ nav {
 
 /* Modals */
 .modal {
-    display: none; 
+    display: none;
     position: fixed;
     z-index: 200;
     left: 0;
     top: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0,0,0,0.8);
+    background-color: rgba(0, 0, 0, 0.8);
     backdrop-filter: blur(5px);
 }
 
@@ -300,9 +372,35 @@ nav {
 
 /* Responsive */
 @media (max-width: 768px) {
-    .nav-links { display: none; } /* Add hamburger menu logic in JS if desired later */
-    .hero h2 { font-size: 2.2rem; }
-    .modal-content { width: 95%; margin: 10% auto; }
+    .nav-links {
+        display: none;
+    }
+
+    /* Add hamburger menu logic in JS if desired later */
+    .hero-container {
+        flex-direction: column-reverse;
+        text-align: center;
+        gap: 30px;
+    }
+
+    .hero h2 {
+        font-size: 2.2rem;
+    }
+
+    .hero-image-wrapper {
+        width: 200px;
+        height: 200px;
+        margin: 0 auto;
+    }
+
+    .education-tags {
+        justify-content: center;
+    }
+
+    .modal-content {
+        width: 95%;
+        margin: 10% auto;
+    }
 }
 
 /* Project Meta Info */
