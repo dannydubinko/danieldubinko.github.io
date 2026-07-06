@@ -1,206 +1,137 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Daniel Dubinko | Robotics Portfolio</title>
     <link rel="stylesheet" href="assets/css/style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
-
 <body>
 
     <nav>
-        <div class="nav-container">
-            <h1 class="logo"><a href="https://dannydubinko.github.io/danieldubinko.github.io/"
-                    style="text-decoration: none; color: inherit;">danieldubinko.</a></h1>
-            <ul class="nav-links">
-                <li><a href="#about">About</a></li>
-                <li><a href="#experience">Experience</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#contact">Contact</a></li>
-                <li><a href="assets/docs/cv.pdf" class="btn-resume" download>CV</a></li>
-                <li><a href="assets/docs/resume.pdf" class="btn-resume" download>Resume</a></li>
-            </ul>
+        <div class="nav-container nav-grid">
+            <div class="nav-left">
+                <h1 class="logo"><a href="https://dannydubinko.github.io/danieldubinko.github.io/" style="text-decoration: none; color: inherit;">daniel dubinko</a></h1>
+            </div>
+            <div class="nav-center">
+                <img src="assets/images/logo.png" alt="Logo" class="center-logo">
+            </div>
+            <div class="nav-right">
+                <ul class="nav-links">
+                    <li><a href="mailto:daniel.dubinko@icloud.com">contact me</a></li>
+                    <li><a href="https://github.com/dannydubinko" target="_blank">github</a></li>
+                    <li><a href="https://www.linkedin.com/in/danieldubinko/" target="_blank">linkedin</a></li>
+                </ul>
+            </div>
         </div>
     </nav>
 
-    <header id="about" class="hero">
-        <div class="container hero-container">
-            <div class="hero-content">
-                <h2>Hello, I'm <span class="highlight">Daniel Dubinko</span></h2>
-                <p class="tagline">Mechatronics and Robotics Engineering Student @ Queen's University</p>
-                <p class="bio">Focused on <strong>motion planning, state estimation, and control</strong> for autonomous
-                    robotic systems. I enjoy working at the system level where algorithms meet real hardware, from
-                    simulation through deployment.</p>
-                <div class="social-links">
-                    <a href="https://github.com/dannydubinko" target="_blank"><i class="fab fa-github"></i> GitHub</a>
-                    <a href="https://www.linkedin.com/in/danieldubinko/" target="_blank"><i class="fab fa-linkedin"></i>
-                        LinkedIn</a>
-                </div>
-
-
-            </div>
-
-            <div class="hero-image-wrapper">
-                <img src="assets/images/profile_picture.jpg" alt="Daniel Dubinko" class="profile-img">
-            </div>
+    <header class="hero" id="toc">
+        <div class="container hero-container toc-container">
+            <ul class="toc-list">
+                <li><a href="#about">about</a></li>
+                <li><a href="#education">education</a></li>
+                <li><a href="#experience">experience</a></li>
+                <li><a href="#projects">projects</a></li>
+            </ul>
         </div>
     </header>
 
+    <section id="about" class="section">
+        <div class="container">
+            <h2 class="section-title">about</h2>
+            <div class="about-content" style="display: flex; gap: 40px; align-items: flex-start; margin-top: 20px;">
+                <div class="about-text" style="flex: 1;">
+                    <p style="margin-bottom: 15px;">Hello, I'm Daniel Dubinko. Mechatronics and Robotics Engineering Student @ Queen's University.</p>
+                    <p class="bio" style="margin-bottom: 15px;">Focused on motion planning, state estimation, and control for autonomous
+                        robotic systems. I enjoy working at the system level where algorithms meet real hardware, from
+                        simulation through deployment.</p>
+                </div>
+                <div class="hero-image-wrapper" style="flex-shrink: 0; width: 250px; height: 250px;">
+                    <img src="assets/images/profile_picture.jpg" alt="Daniel Dubinko" class="profile-img">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="education" class="section">
+        <div class="container">
+            <h2 class="section-title">education</h2>
+            <div style="margin-top: 20px;">
+                <p>B.A.Sc. Mechatronics and Robotics Engineering, Queen's University (2026)</p>
+                <br>
+                <p>Relevant Coursework:</p>
+                <ul style="list-style-type: none; margin-top: 10px; margin-bottom: 20px;">
+                    <li>- ELEC 475: Computer Vision and Deep Learning</li>
+                    <li>- ELEC 425: Machine Learning and Deep Learning</li>
+                    <li>- MREN 446: Mobile Robotics</li>
+                    <li>- MREN 348: Intro to Robotics & Coordinate Transformations</li>
+                    <li>- ELEC 279: Java and Object Oriented Programming</li>
+                    <li>- ELEC 326: Probability and Random Processes</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
     <section id="experience" class="section">
         <div class="container">
-            <h2 class="section-title">Experience</h2>
-            <div class="timeline">
+            <h2 class="section-title">experience</h2>
+            <div class="timeline" style="margin-top: 20px;">
                 <div class="timeline-item">
-                    <div class="timeline-dot"></div>
                     <div class="timeline-content">
-                        <h3>Robotics / Engineering Role</h3>
-                        <h4>Company Name | Date - Date</h4>
-                        <ul>
-                            <li>Responsibility or achievement 1.</li>
-                            <li>Responsibility or achievement 2.</li>
+                        <p><strong>Robotics / Engineering Role</strong></p>
+                        <p style="margin-bottom: 5px;">Company Name | Date - Date</p>
+                        <ul style="list-style-type: none; margin-top: 10px; padding-left: 0;">
+                            <li>- Responsibility or achievement 1.</li>
+                            <li>- Responsibility or achievement 2.</li>
                         </ul>
                     </div>
                 </div>
             </div>
 
-            <h3 class="subsection-title" style="margin-top: 60px;">Skills</h3>
-            <div class="skills-grid">
-                <div class="skill-item"><i class="fab fa-python"></i> Python</div>
-                <div class="skill-item"><i class="fas fa-code"></i> C++</div>
-                <div class="skill-item"><i class="fab fa-java"></i> Java</div>
-                <div class="skill-item"><i class="fas fa-robot"></i> ROS2</div>
-                <div class="skill-item"><i class="fab fa-linux"></i> Linux</div>
-                <div class="skill-item"><i class="fab fa-git-alt"></i> Git</div>
-            </div>
-
-            <h3 class="subsection-title" style="margin-top: 40px;">Completed Courses</h3>
-            <div class="education-tags">
-                <!-- 4th Year -->
-                <span class="tag tag-4th">ELEC 475: Computer Vision and Deep Learning</span>
-                <span class="tag tag-4th">ELEC 425: Machine Learning and Deep Learning</span>
-                <span class="tag tag-4th">MREN 446: Mobile Robotics</span>
-                <!-- 3rd Year -->
-                <span class="tag tag-4th">MREN 348: Intro to Robotics & Coordinate Transformations</span>
-                <span class="tag tag-4th">ELEC 279: Java and Object Oriented Programming</span>
-                <span class="tag tag-4th">ELEC 326: Probability and Random Processes</span>
-                <!-- 2nd Year -->
-
-            </div>
+            <h2 class="section-title" style="margin-top: 40px; margin-bottom: 10px;">skills</h2>
+            <p>Python, C++, Java, ROS2, Linux, Git</p>
         </div>
     </section>
 
-    <section id="projects" class="section bg-darker">
+    <section id="projects" class="section">
         <div class="container">
-            <h2 class="section-title">Projects</h2>
-            <div class="project-grid">
-
-                <div class="project-card" onclick="window.location.href='projects/capstone.html'">
-                    <div class="card-img-placeholder">Capstone Robot Image</div>
-                    <div class="card-content">
-                        <h3>Capstone Project (In Progress)</h3>
-                        <p>Full autonomous robotics system featuring autonomous navigation, searching, and pick and place.</p>
-                        <span class="tech-stack">ROS · Nav2 · UDP · URDF</span>
-                    </div>
+            <h2 class="section-title">projects</h2>
+            <div class="project-list" style="margin-top: 20px; display: flex; flex-direction: column; gap: 30px;">
+                <div class="project-item">
+                    <p><strong><a href="projects/capstone.html">capstone project (in progress)↗</a></strong></p>
+                    <p>Full autonomous robotics system featuring autonomous navigation, searching, and pick and place.</p>
+                    <p class="tech-stack" style="color: #666;">[ROS · Nav2 · UDP · URDF]</p>
                 </div>
-
-                <div class="project-card" onclick="window.location.href='projects/flipwalker.html'">
-                    <div class="card-img-placeholder">FlipWalker Image</div>
-                    <div class="card-content">
-                        <h3>FlipWalker</h3>
-                        <p>Iterative design and control architecture for a walking robot mechanism.</p>
-                        <span class="tech-stack">C++ · Controls · CAD</span>
-                    </div>
+                <div class="project-item">
+                    <p><strong><a href="projects/flipwalker.html">flipwalker↗</a></strong></p>
+                    <p>Iterative design and control architecture for a walking robot mechanism.</p>
+                    <p class="tech-stack" style="color: #666;">[C++ · Controls · CAD]</p>
                 </div>
-
-                <div class="project-card" onclick="window.location.href='projects/qkrt.html'">
-                    <div class="card-img-placeholder">QKRT Image</div>
-                    <div class="card-content">
-                        <h3>QKRT Controls</h3>
-                        <p>Flywheel control systems and iterative hardware design.</p>
-                        <span class="tech-stack">Hardware · Controls</span>
-                    </div>
+                <div class="project-item">
+                    <p><strong><a href="projects/qkrt.html">qkrt controls↗</a></strong></p>
+                    <p>Flywheel control systems and iterative hardware design.</p>
+                    <p class="tech-stack" style="color: #666;">[Hardware · Controls]</p>
                 </div>
-
-                <div class="project-card" onclick="window.location.href='projects/petfeeder.html'">
-                    <div class="card-img-placeholder">Pet Feeder Image</div>
-                    <div class="card-content">
-                        <h3>Automated Pet Feeder</h3>
-                        <p>Hardware integration with a web-based scheduling front-end.</p>
-                        <span class="tech-stack">Node.js · Raspberry Pi · Arduino</span>
-                    </div>
+                <div class="project-item">
+                    <p><strong><a href="projects/petfeeder.html">automated pet feeder↗</a></strong></p>
+                    <p>Hardware integration with a web-based scheduling front-end.</p>
+                    <p class="tech-stack" style="color: #666;">[Node.js · Raspberry Pi · Arduino]</p>
                 </div>
-
-                <div class="project-card" onclick="window.location.href='projects/co2.html'">
-                    <div class="card-img-placeholder">CO2 Robot Image</div>
-                    <div class="card-content">
-                        <h3>Autonomous CO₂ Robot</h3>
-                        <p>Indoor navigation and SLAM for generating spatial heat maps.</p>
-                        <span class="tech-stack">C++ · ROS · SLAM</span>
-                    </div>
+                <div class="project-item">
+                    <p><strong><a href="projects/co2.html">autonomous co₂ robot↗</a></strong></p>
+                    <p>Indoor navigation and SLAM for generating spatial heat maps.</p>
+                    <p class="tech-stack" style="color: #666;">[C++ · ROS · SLAM]</p>
                 </div>
-
-                <div class="project-card" onclick="window.location.href='projects/loader.html'">
-                    <div class="card-img-placeholder">Auto Loader Image</div>
-                    <div class="card-content">
-                        <h3>Automatic Loader</h3>
-                        <p>Automated loading mechanism design and implementation.</p>
-                        <span class="tech-stack">Mechanical Design · Automation</span>
-                    </div>
+                <div class="project-item">
+                    <p><strong><a href="projects/loader.html">automatic loader↗</a></strong></p>
+                    <p>Automated loading mechanism design and implementation.</p>
+                    <p class="tech-stack" style="color: #666;">[Mechanical Design · Automation]</p>
                 </div>
-
-                <div class="project-card" onclick="window.location.href='projects/queens.html'">
-                    <div class="card-img-placeholder">VR / Arm Image</div>
-                    <div class="card-content">
-                        <h3>Research: Queen's Ingenuity Labs</h3>
-                        <p>Real-time human–robot interaction system using VR and robotic arms.</p>
-                        <span class="tech-stack">VR · HRI · Vicon</span>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-    </section>
-
-    <section id="contact" class="section">
-        <div class="container" style="text-align: center;">
-            <h2 class="section-title">Get In Touch</h2>
-            <p class="bio" style="margin: 0 auto 30px;">I'm currently looking for new opportunities. Whether you have a
-                question or just want to say hi, feel free to reach out and I'll get back to you as soon as I can!</p>
-            <a href="mailto:daniel.dubinko@icloud.com" class="btn-resume"
-                style="font-size: 1.2rem; padding: 15px 30px;"><i class="fas fa-envelope"></i> Say Hello</a>
-        </div>
-    </section>
-
-    <section id="origins" class="section bg-darker">
-        <div class="container">
-            <h2 class="section-title">Origins</h2>
-            <div class="timeline">
-                <div class="timeline-item">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-content">
-                        <h3>2002</h3>
-                        <h4>The Beginning</h4>
-                        <p style="color: var(--text-muted);">The journey begins.</p>
-                    </div>
-                </div>
-                <div class="timeline-item">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-content">
-                        <h3>2020</h3>
-                        <h4>Queen's University</h4>
-                        <p style="color: var(--text-muted);">Started Mechatronics and Robotics Engineering degree.</p>
-                    </div>
-                </div>
-                <div class="timeline-item">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-content">
-                        <h3>2026</h3>
-                        <h4>Present</h4>
-                        <p style="color: var(--text-muted);">Graduating and continuing to build robotic systems.</p>
-                    </div>
+                <div class="project-item">
+                    <p><strong><a href="projects/queens.html">research: queen's ingenuity labs↗</a></strong></p>
+                    <p>Real-time human–robot interaction system using VR and robotic arms.</p>
+                    <p class="tech-stack" style="color: #666;">[VR · HRI · Vicon]</p>
                 </div>
             </div>
         </div>
@@ -208,5 +139,4 @@
 
     <script src="assets/js/script.js"></script>
 </body>
-
 </html>
