@@ -78,13 +78,13 @@ nav {
 }
 
 .logo {
-    font-size: 1.5rem;
+    font-size: 1rem;
     font-weight: normal;
     letter-spacing: 1px;
 }
 
 .center-logo {
-    height: 70px;
+    height: 80px;
     width: auto;
     object-fit: cover;
     border-radius: 9999px;
