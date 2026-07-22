@@ -36,50 +36,101 @@
 
 <body>
     <nav>
-        <div class="nav-container">
-            <h1 class="logo"><a href="../index.html" style="text-decoration: none; color: inherit;">danieldubinko.</a>
-            </h1>
-            <ul class="nav-links">
-                <li><a href="../index.html#projects"
-                        style="text-decoration: none; color: var(--text-main); font-weight: bold;"><i
-                            class="fas fa-arrow-left"></i> Back to Projects</a></li>
-            </ul>
+        <div class="nav-container nav-grid">
+            <div class="nav-left">
+                <h1 class="logo"><a href="../index.html" style="text-decoration: none; color: inherit;">danieldubinko.</a></h1>
+            </div>
+            <div class="nav-center">
+                <a href="../index.html">
+                    <img src="../assets/images/logo.png" alt="Logo" class="center-logo">
+                </a>
+            </div>
+            <div class="nav-right">
+                <ul class="nav-links">
+                    <li><a href="../index.html#projects"
+                            style="text-decoration: none; color: var(--text-main); font-weight: bold;"><i
+                                class="fas fa-arrow-left"></i> Back to Projects</a></li>
+                </ul>
+            </div>
         </div>
     </nav>
 
     <section class="section project-page">
         <div class="container">
             <div class="project-content">
-                <h2>Capstone Project (In Progress)</h2>
-                <div class="project-meta">
-                    <p class="project-description">Full autonomous robotics system featuring Lidar, Nav2, and UDP
-                        communication.</p>
-                    <a href="https://github.com/dannydubinko/autonomous-litter-bot-capstone" target="_blank"
+                <h2>Autonomous Litter-Collecting Robot Capstone Project</h2>
+
+                <a href="https://github.com/dannydubinko/autonomous-litter-bot-capstone" target="_blank"
                         class="btn-repo"><i class="fab fa-github"></i> View Repository</a>
+
+                <div class="project-meta">
+                    <h3 id="project-description">Project Description</h3>
+
+                    <p class="project-description">Unitree Go1 Litter Collecting Autononomus Robot<br><br>
+
+                        An autonomous, vision-guided litter-collection system built on the Unitree Go1 quadruped
+                        robotics platform.
+                        This project integrates simultaneous localization and mapping (SLAM),
+                        advanced sensor fusion, object detection, and mobile autonomy to identify, navigate toward, and
+                        collect surface litter in real-time.
+                    </p>
+                    <br>
+                    
                 </div>
-                <img src="path/to/capstone-built.jpg" alt="Picture of built capstone"
+
+                <br>
+                <h4 id="table-of-contents">Table of Contents</h4>
+                <p style="margin-top: 10px; margin-bottom: 20px; font-weight: bold; font-size: 0.9em;">
+                    <a href="#poster" style="color: var(--text-muted); text-decoration: none;">Poster</a> &bull; 
+                    <a href="#system-design" style="color: var(--text-muted); text-decoration: none;">System Design</a> &bull; 
+                    <a href="#nav2-slam" style="color: var(--text-muted); text-decoration: none;">Nav2 & SLAM</a> &bull; 
+                    <a href="#object-detection" style="color: var(--text-muted); text-decoration: none;">Object Detection</a>
+                </p>
+
+                <img src="/assets/images/capstone/capstone_image.png" alt="Picture of built capstone"
                     style="width:100%; border-radius:8px;">
-                <a href="#" target="_blank" class="btn-repo" style="margin-top: 15px; display: inline-block;">
+                <a href="https://www.youtube.com/watch?v=BLDHaaSrFvM" target="_blank" class="btn-repo" style="margin-top: 15px; display: inline-block; background-color: #f5f5f5; padding: 6px 10px; border-radius: 4px; font-size: 1.1em;">
                     <i class="fas fa-play-circle"></i> Watch Capstone Video
                 </a>
 
-                <h3>System Architecture</h3>
-                <p>Explanation of the nodes powering the robot.</p>
-                <img src="path/to/rqt-graph.png" alt="Initial RQT Graph" style="width:100%;">
-                <p>Flow chart detailing the integration of other team members' components.</p>
-                <img src="path/to/flowchart.png" alt="Team Flow Chart" style="width:100%;">
 
-                <h3>Navigation & Visualization (Nav2)</h3>
-                <img src="path/to/lidar-scan.png" alt="Lidar Scan" style="width:48%;">
-                <img src="path/to/rviz.png" alt="RVIZ Visualization" style="width:48%;">
 
+                <h3 id="poster">Poster</h3>
+                <img src="/assets/images/capstone/capstone_poster.jpg" alt="Capstone Poster" style="width:100%;">
+
+                <h3 id="system-design">System Design</h3>
+                <img src="/assets/images/capstone/capstone_flowchart.jpg" alt="Capstone Flowchart" style="width:100%;">
+
+                <h3 id="nav2-slam">Nav2 & SLAM</h3>
+                
+                <img src="/assets/images/capstone/slam_map.png" alt="Capstone SLAM" style="width:100%;">
+                <a href="https://www.youtube.com/watch?v=UhlzwNPbjsI" target="_blank" class="btn-repo" style="margin-top: 15px; margin-bottom: 15px; display: inline-block; background-color: #f5f5f5; padding: 6px 10px; border-radius: 4px; font-size: 1.1em;">
+                    <i class="fas fa-play-circle"></i> Watch SLAM Mapping
+                </a>
+                <p>Built a self-contained external localization unit designed to be deployed across any Go1 platform by
+                    mounting a LiDAR
+                    and IMU with a custom foam dampening mount to reduce vibration-induced IMU noise during locomotion.
+                </p>
+                <img src="/assets/images/capstone/lidar_imu.jpg" alt="Capstone Lidar IMU" style="width:100%;">
+
+                 <h3 id="object-detection">Object Detection</h3>
+                 <img src="/assets/images/capstone/can_segmentation.png" alt="Capstone Can Segmentation" style="width:100%;">
+                 <p>An object detection pipeline using YOLOv8 to identify and localize litter items 
+                    in the robot’s field of view. This system performs real-time detection and projects 
+                    the can's postition onto the 2D global map to guide the robot’s navigation and collection 
+                    maneuvers, enabling autonomous litter identification and targeting.
+                 </p>
+
+
+
+                <!-- 
                 <h3>Hardware & Communication</h3>
                 <p>URDF Configuration and UDP setup for low-latency communication.</p>
                 <img src="path/to/urdf-visual.png" alt="URDF" style="width:100%;">
                 <p><strong>UDP Explanation:</strong> [Insert brief explanation of UDP setup here].</p>
 
                 <h3>Final Output</h3>
-                <img src="path/to/final-rqt-graph.png" alt="Final RQT Graph" style="width:100%;">
+                <img src="path/to/final-rqt-graph.png" alt="Final RQT Graph" style="width:100%;"> -->
             </div>
         </div>
     </section>

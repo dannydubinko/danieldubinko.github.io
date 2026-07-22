@@ -36,14 +36,23 @@
 
 <body>
     <nav>
-        <div class="nav-container">
-            <h1 class="logo"><a href="../index.html" style="text-decoration: none; color: inherit;">danieldubinko.</a>
-            </h1>
-            <ul class="nav-links">
-                <li><a href="../index.html#projects"
-                        style="text-decoration: none; color: var(--text-main); font-weight: bold;"><i
-                            class="fas fa-arrow-left"></i> Back to Projects</a></li>
-            </ul>
+        <div class="nav-container nav-grid">
+            <div class="nav-left">
+                <h1 class="logo"><a href="../index.html"
+                        style="text-decoration: none; color: inherit;">danieldubinko.</a></h1>
+            </div>
+            <div class="nav-center">
+                <a href="../index.html">
+                    <img src="../assets/images/logo.png" alt="Logo" class="center-logo">
+                </a>
+            </div>
+            <div class="nav-right">
+                <ul class="nav-links">
+                    <li><a href="../index.html#projects"
+                            style="text-decoration: none; color: var(--text-main); font-weight: bold;"><i
+                                class="fas fa-arrow-left"></i> Back to Projects</a></li>
+                </ul>
+            </div>
         </div>
     </nav>
 
@@ -51,28 +60,30 @@
         <div class="container">
             <div class="project-content">
                 <h2>QKRT Controls</h2>
+                <div style="display: flex; gap: 10px;">
+                    <a href="https://github.com/dannydubinko" target="_blank" class="btn-repo"><i
+                            class="fab fa-github"></i> View Repository</a>
+                    <a href="https://qkrt.ca" target="_blank" class="btn-repo"><i class="fas fa-globe"></i> QKRT
+                        Website</a>
+                </div>
+                <br>
                 <div class="project-meta">
                     <p class="project-description">Flywheel control systems and iterative hardware design.</p>
-                    <div style="display: flex; gap: 10px;">
-                        <a href="https://github.com/dannydubinko" target="_blank" class="btn-repo"><i
-                                class="fab fa-github"></i> View Repository</a>
-                        <a href="https://qkrt.ca" target="_blank" class="btn-repo"><i class="fas fa-globe"></i> QKRT
-                            Website</a>
-                    </div>
-                </div>
-                <a href="#" target="_blank" class="btn-repo" style="margin-top: 15px; display: inline-block;">
-                    <i class="fas fa-play-circle"></i> Watch QKRT Overview Video
-                </a>
 
-                <h3>System Logic</h3>
+                </div>
+                <!-- <a href="#" target="_blank" class="btn-repo" style="margin-top: 15px; display: inline-block;">
+                    <i class="fas fa-play-circle"></i> Watch QKRT Overview Video
+                </a> -->
+
+                <!-- <h3>System Logic</h3>
                 <img src="path/to/qkrt-flowchart.png" alt="Flow Chart" style="width:100%;">
-                <p>[Flow Chart Explanation].</p>
+                <p>[Flow Chart Explanation].</p> -->
 
                 <h3>System Logic: Flywheels</h3>
                 <img src="../assets/images/uml_flywheel.png" alt="Flywheel_UML" style="width:100%;">
-                <a href="#" target="_blank" class="btn-repo" style="margin-top: 15px; display: inline-block;">
+                <!-- <a href="#" target="_blank" class="btn-repo" style="margin-top: 15px; display: inline-block;">
                     <i class="fas fa-play-circle"></i> Watch Flywheel Video
-                </a>
+                </a> -->
             </div>
         </div>
     </section>
