@@ -38,7 +38,8 @@
     <nav>
         <div class="nav-container nav-grid">
             <div class="nav-left">
-                <h1 class="logo"><a href="../index.html" style="text-decoration: none; color: inherit;">danieldubinko.</a></h1>
+                <h1 class="logo"><a href="../index.html"
+                        style="text-decoration: none; color: inherit;">danieldubinko.</a></h1>
             </div>
             <div class="nav-center">
                 <a href="../index.html">
@@ -58,39 +59,109 @@
     <section class="section project-page">
         <div class="container">
             <div class="project-content">
-                <h2>FlipWalker</h2>
-                <div class="project-meta">
-                    <p class="project-description">Iterative design and control architecture for a walking robot
-                        mechanism.</p>
-                    <a href="https://github.com/dannydubinko" target="_blank" class="btn-repo"><i
-                            class="fab fa-github"></i> View Repository</a>
-                </div>
-                <a href="#" target="_blank" class="btn-repo" style="margin-top: 15px; display: inline-block;">
-                    <i class="fas fa-play-circle"></i> Watch FlipWalker Video
+                <h2>Proprioceptive State Estimation for the Underactuated FlipWalker Robot</h2>
+                <a href="https://github.com/dannydubinko/flip-walker" target="_blank" class="btn-repo"
+                    style="margin-bottom: 15px; display: inline-block; background-color: #f5f5f5; padding: 6px 10px; border-radius: 4px; font-size: 1.1em;">
+                    <i class="fab fa-github"></i> View Repository
                 </a>
 
-                <h3>Hardware Evolution</h3>
-                <div style="display: flex; gap: 10px;">
-                    <img src="path/to/old-flipwalker.jpg" alt="Old Flip Walker" style="width:48%;">
-                    <img src="path/to/new-flipwalker.jpg" alt="New Flip Walker" style="width:48%;">
+
+                <div class="project-meta">
+                    <p class="project-description">Transitioning a Jacob's Ladder-inspired robot from open-loop manual
+                        control to closed-loop proprioceptive state and angle control.</p>
+                    <br>
+                    <h4 id="table-of-contents">Table of Contents</h4>
+                    <p style="margin-top: 10px; margin-bottom: 20px; font-weight: bold; font-size: 0.9em;">
+                        <a href="#overview" style="color: var(--text-muted); text-decoration: none;">Overview</a> &bull;
+                        <a href="#motivation" style="color: var(--text-muted); text-decoration: none;">Why It Was
+                            Built</a>
+                        &bull;
+                        <a href="#gallery" style="color: var(--text-muted); text-decoration: none;">System & Results</a>
+                    </p>
+                    <img src="../assets/images/flipwalker/flipwalker.png" alt="flipwalker"
+                        style="width:100%; border-radius: 8px; margin-bottom: 10px;">
+
+                    <br>
+
                 </div>
-                <p>CAD integration and parts:</p>
-                <img src="path/to/stl-file.png" alt="STL File Picture" style="width:100%;">
 
-                <h3>Software & Controls</h3>
-                <p><strong>Stack Explanation:</strong> [Insert stack details here].</p>
-                <img src="path/to/flipwalker-flowchart.png" alt="Flow Chart" style="width:100%;">
-                <p>Read the full code structure explanation in the <a href="https://github.com/dannydubinko/repo-link"
-                        target="_blank">GitHub README</a>.</p>
+                <a href="https://youtu.be/cLnS-nGkOmo" target="_blank" class="btn-repo"
+                    style="margin-top: 15px; margin-bottom: 15px; display: inline-block; background-color: #f5f5f5; padding: 6px 10px; border-radius: 4px; font-size: 1.1em;">
+                    <i class="fas fa-play-circle"></i> Watch FlipWalker Video
+                </a>
+                <a href="/assets/docs/MECH_461_Final_Report_Dubinko.pdf" target="_blank" class="btn-repo"
+                    style="margin-bottom: 15px; display: inline-block; background-color: #f5f5f5; padding: 6px 10px; border-radius: 4px; font-size: 1.1em;">
+                    <i class="fas fa-file-pdf"></i> Download Research Paper
+                </a>
 
-                <h3>Data Analysis & Future Work</h3>
-                <img src="path/to/graphs.png" alt="Graphs" style="width:100%;">
-                <p>[Explanation of graphs].</p>
-                <h4>Future Work</h4>
-                <ul>
-                    <li>[Insert future work point 1]</li>
-                    <li>[Insert future work point 2]</li>
-                </ul>
+
+                <br>
+
+
+                <h3 id="overview">Overview: From Open-Loop to Closed-Loop Control</h3>
+                <p>The FlipWalker is an underactuated bipedal robot that locomotes by cyclically flipping two
+                    interconnected body segments. Because the segments are joined by flexible cable linkages that
+                    intentionally pass through mechanical singularities, standard rigid-shaft encoders cannot be mounted
+                    at the joint. </p><br>
+                <p>Initially, the robot was controlled using open-loop, flat-ground servo actuation via manual and timed
+                    inputs. This approach lacked robustness, as the controller could not determine the relative angle
+                    between the parent and child segments. To solve this, a non-contact, magnetometer-based
+                    proprioceptive state-estimation pipeline was developed.</p><br>
+                <p>By tracking an embedded neodymium magnet in three-dimensional space using MLX90393 Hall-effect
+                    sensors, the relative joint angle is recovered using the <code>atan2</code> of the sensed field
+                    components. A seven-point look-up table (LUT) linearises the response, enabling a three-state
+                    finite-state machine to reliably control the gait and close the loop on the flipping cycle.</p>
+                <br>
+
+                <h3 id="motivation">Why It Was Built</h3>
+                <p>Navigation of unstructured and highly complex terrains remains a persistent challenge in mobile
+                    robotics. Traditional wheeled and tracked platforms excel on prepared surfaces but stall when
+                    confronted with sharp discontinuities or gaps that exceed their footprint.</p><br>
+                <p>The FlipWalker was built to traverse these various strange and challenging terrains. By trading joint
+                    count and actuator authority for mechanical ingenuity—inspired by the optical illusion of the
+                    Jacob’s Ladder toy—it propels itself exclusively by normal-force push-offs against the ground. The
+                    ultimate goal of this research is to enable autonomous swarms of these units to self-assemble into
+                    rigid bridges and traverse large gaps.</p>
+                <br>
+
+                <h3 id="gallery">System & Results</h3>
+                <p>Below are key diagrams highlighting the flexible joint mechanics, the gait state machine, and the
+                    look-up table (LUT) calibration used to achieve accurate angle control.</p>
+
+                <img src="../assets/images/flipwalker/jacobs_ladder_example_no_flipwalker.png" alt="Cable Joint Diagram"
+                    style="width:50%; display: block; margin: 0 auto 10px auto; border-radius: 8px;">
+                <p
+                    style="text-align: center; color: var(--text-muted); font-size: 0.9em; margin-bottom: 30px; padding: 0 10px;">
+                    A diagram illustrating the flexible cable linkages that join the two body segments, enabling the
+                    robot to cycle through mechanical singularities similarly to a Jacob's Ladder toy.
+                </p>
+
+                <img src="../assets/images/flipwalker/fig_state_diagram.png" alt="Gait State Machine"
+                    style="width:100%; border-radius: 8px; margin-bottom: 10px;">
+                <p
+                    style="text-align: center; color: var(--text-muted); font-size: 0.9em; margin-bottom: 30px; padding: 0 10px;">
+                    The three-state finite-state machine used by the gait controller. The transitions are triggered by
+                    the magnetometer, which detects whether the child segment is behind, stacked on, or ahead of the
+                    parent segment.
+                </p>
+
+                <img src="../assets/images/flipwalker/fig_calibration.png" alt="LUT Calibration"
+                    style="width:100%; border-radius: 8px; margin-bottom: 10px;">
+                <p
+                    style="text-align: center; color: var(--text-muted); font-size: 0.9em; margin-bottom: 30px; padding: 0 10px;">
+                    The seven-point Look-Up Table (LUT) calibration used to correct the non-linear response of the raw
+                    magnetometer readings into accurate physical joint angles.
+                </p>
+
+                <img src="../assets/images/flipwalker/fig_lut_overlay.png" alt="Raw atan2 vs LUT Output"
+                    style="width:100%; border-radius: 8px; margin-bottom: 10px;">
+                <p
+                    style="text-align: center; color: var(--text-muted); font-size: 0.9em; margin-bottom: 30px; padding: 0 10px;">
+                    A comparison showing the compressed raw <code>atan2</code> output alongside the final LUT-corrected
+                    angle, which successfully maps the readings across the full ±90&deg; mechanical sweep.
+                </p>
+
+
             </div>
         </div>
     </section>

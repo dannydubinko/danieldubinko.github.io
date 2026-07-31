@@ -38,7 +38,8 @@
     <nav>
         <div class="nav-container nav-grid">
             <div class="nav-left">
-                <h1 class="logo"><a href="../index.html" style="text-decoration: none; color: inherit;">danieldubinko.</a></h1>
+                <h1 class="logo"><a href="../index.html"
+                        style="text-decoration: none; color: inherit;">danieldubinko.</a></h1>
             </div>
             <div class="nav-center">
                 <a href="../index.html">
@@ -61,7 +62,19 @@
                 <h2>Autonomous Litter-Collecting Robot Capstone Project</h2>
 
                 <a href="https://github.com/dannydubinko/autonomous-litter-bot-capstone" target="_blank"
-                        class="btn-repo"><i class="fab fa-github"></i> View Repository</a>
+                    class="btn-repo"
+                    style="margin-bottom: 15px; display: inline-block; background-color: #f5f5f5; padding: 6px 10px; border-radius: 4px; font-size: 1.1em;">
+                    <i class="fab fa-github"></i> View Repository
+                </a>
+                <a href="https://www.youtube.com/watch?v=BLDHaaSrFvM" target="_blank" class="btn-repo"
+                    style="margin-top: 15px; display: inline-block; background-color: #f5f5f5; padding: 6px 10px; border-radius: 4px; font-size: 1.1em;">
+                    <i class="fas fa-play-circle"></i> Watch Capstone Video
+                </a>
+                <a href="https://www.youtube.com/watch?v=UhlzwNPbjsI" target="_blank" class="btn-repo"
+                    style="margin-top: 15px; margin-bottom: 15px; display: inline-block; background-color: #f5f5f5; padding: 6px 10px; border-radius: 4px; font-size: 1.1em;">
+                    <i class="fas fa-play-circle"></i> Watch SLAM Mapping
+                </a>
+
 
                 <div class="project-meta">
                     <h3 id="project-description">Project Description</h3>
@@ -75,21 +88,24 @@
                         collect surface litter in real-time.
                     </p>
                     <br>
-                    
+
                 </div>
 
                 <br>
                 <h4 id="table-of-contents">Table of Contents</h4>
                 <p style="margin-top: 10px; margin-bottom: 20px; font-weight: bold; font-size: 0.9em;">
-                    <a href="#poster" style="color: var(--text-muted); text-decoration: none;">Poster</a> &bull; 
-                    <a href="#system-design" style="color: var(--text-muted); text-decoration: none;">System Design</a> &bull; 
-                    <a href="#nav2-slam" style="color: var(--text-muted); text-decoration: none;">Nav2 & SLAM</a> &bull; 
-                    <a href="#object-detection" style="color: var(--text-muted); text-decoration: none;">Object Detection</a>
+                    <a href="#poster" style="color: var(--text-muted); text-decoration: none;">Poster</a> &bull;
+                    <a href="#system-design" style="color: var(--text-muted); text-decoration: none;">System Design</a>
+                    &bull;
+                    <a href="#nav2-slam" style="color: var(--text-muted); text-decoration: none;">Nav2 & SLAM</a> &bull;
+                    <a href="#object-detection" style="color: var(--text-muted); text-decoration: none;">Object
+                        Detection</a>
                 </p>
 
                 <img src="/assets/images/capstone/capstone_image.png" alt="Picture of built capstone"
                     style="width:100%; border-radius:8px;">
-                <a href="https://www.youtube.com/watch?v=BLDHaaSrFvM" target="_blank" class="btn-repo" style="margin-top: 15px; display: inline-block; background-color: #f5f5f5; padding: 6px 10px; border-radius: 4px; font-size: 1.1em;">
+                <a href="https://www.youtube.com/watch?v=BLDHaaSrFvM" target="_blank" class="btn-repo"
+                    style="margin-top: 15px; display: inline-block; background-color: #f5f5f5; padding: 6px 10px; border-radius: 4px; font-size: 1.1em;">
                     <i class="fas fa-play-circle"></i> Watch Capstone Video
                 </a>
 
@@ -102,9 +118,10 @@
                 <img src="/assets/images/capstone/capstone_flowchart.jpg" alt="Capstone Flowchart" style="width:100%;">
 
                 <h3 id="nav2-slam">Nav2 & SLAM</h3>
-                
+
                 <img src="/assets/images/capstone/slam_map.png" alt="Capstone SLAM" style="width:100%;">
-                <a href="https://www.youtube.com/watch?v=UhlzwNPbjsI" target="_blank" class="btn-repo" style="margin-top: 15px; margin-bottom: 15px; display: inline-block; background-color: #f5f5f5; padding: 6px 10px; border-radius: 4px; font-size: 1.1em;">
+                <a href="https://www.youtube.com/watch?v=UhlzwNPbjsI" target="_blank" class="btn-repo"
+                    style="margin-top: 15px; margin-bottom: 15px; display: inline-block; background-color: #f5f5f5; padding: 6px 10px; border-radius: 4px; font-size: 1.1em;">
                     <i class="fas fa-play-circle"></i> Watch SLAM Mapping
                 </a>
                 <p>Built a self-contained external localization unit designed to be deployed across any Go1 platform by
@@ -113,13 +130,14 @@
                 </p>
                 <img src="/assets/images/capstone/lidar_imu.jpg" alt="Capstone Lidar IMU" style="width:100%;">
 
-                 <h3 id="object-detection">Object Detection</h3>
-                 <img src="/assets/images/capstone/can_segmentation.png" alt="Capstone Can Segmentation" style="width:100%;">
-                 <p>An object detection pipeline using YOLOv8 to identify and localize litter items 
-                    in the robot’s field of view. This system performs real-time detection and projects 
-                    the can's postition onto the 2D global map to guide the robot’s navigation and collection 
+                <h3 id="object-detection">Object Detection</h3>
+                <img src="/assets/images/capstone/can_segmentation.png" alt="Capstone Can Segmentation"
+                    style="width:100%;">
+                <p>An object detection pipeline using YOLOv8 to identify and localize litter items
+                    in the robot’s field of view. This system performs real-time detection and projects
+                    the can's postition onto the 2D global map to guide the robot’s navigation and collection
                     maneuvers, enabling autonomous litter identification and targeting.
-                 </p>
+                </p>
 
 
 
