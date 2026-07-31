@@ -187,7 +187,7 @@ nav {
         flex-direction: column;
         gap: 15px;
     }
-    
+
     .hero {
         padding: 0;
     }
@@ -217,4 +217,11 @@ nav {
 .btn-repo:hover {
     background-color: #e5e5e5;
     text-decoration: none;
+}
+
+html {
+    scroll-padding-top: 120px;
+    /* Adjusted to 120px to perfectly match 80px logo + 40px padding */
+    scroll-behavior: smooth;
+    /* Optional: Adds smooth scrolling */
 }
